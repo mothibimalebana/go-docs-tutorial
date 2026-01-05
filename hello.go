@@ -1,3 +1,4 @@
+// Echo1 prints its command-line arguments
 package main
 
 import (
@@ -6,5 +7,8 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello, World", os.Args[1:len(os.Args)])
+	seperator := " "
+	for i := 0; i < len(os.Args); i++ {
+		fmt.Println(i, seperator+os.Args[i])
+	}
 }
