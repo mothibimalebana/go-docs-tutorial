@@ -1,3 +1,3 @@
-module github.com/mothibimalebana/go-docs-tutorial.git
+module example/hello
 
 go 1.25.5
