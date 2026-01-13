@@ -3,9 +3,18 @@ package main
 import (
 	"example/greetings"
 	"fmt"
+	"log"
 )
 
 func main() {
-	msg := greetings.Hello("Mothibi")
+	/** set properties of the predefined logger **/
+	log.SetPrefix("greetings: \n")
+	log.SetFlags(0)
+
+	//Request a greeting
+	msg, err := greetings.Hello("")
+	if err != nil {
+		log.Fatal(err)
+	}
 	fmt.Println(msg)
 }
