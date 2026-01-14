@@ -12,7 +12,8 @@ func main() {
 	log.SetFlags(0)
 
 	//Request a greeting
-	msg, err := greetings.Hello("")
+	sliceOfNames := []string{"Mothibi", "Thabisile"}
+	msg, err := greetings.Hello(sliceOfNames)
 	if err != nil {
 		log.Fatal(err)
 	}
