@@ -9,9 +9,6 @@ import (
 func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
-	msg, err := greetings.Hello("")
-	if err == nil {
-		fmt.Println(msg)
-	}
-	log.Fatal(err)
+	msg := greetings.Hellos([]string{"Mothibi", "Thabisile"})
+	fmt.Println(msg)
 }
